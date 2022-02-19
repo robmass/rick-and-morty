@@ -16,7 +16,14 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "importsNotUsedAsValues": "error",
-    "baseUrl": "."
+    "baseUrl": ".",
+    "paths": {
+      "@/components/*": ["src/components/*"],
+      "@/hooks/*": ["src/hooks/*"],
+      "@/types/*": ["src/types/*"],
+      "@/services/*": ["src/services/*"],
+      "@/stories/*": ["src/stories/*"]
+    }
   },
   "include": ["src"]
 }
