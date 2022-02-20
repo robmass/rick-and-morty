@@ -3,10 +3,10 @@ import "@/components/character-card/episodes/index.css";
 import type { Episode } from "@/types/episode";
 import type { FC, ReactElement } from "react";
 
-type CharacterEpisodesProps = {
+export type CharacterCardEpisodesProps = {
   episodes: Episode[];
 };
-export const CharacterCardEpisodes: FC<CharacterEpisodesProps> = ({
+export const CharacterCardEpisodes: FC<CharacterCardEpisodesProps> = ({
   episodes,
 }) => {
   const title =
@@ -36,7 +36,9 @@ const renderEpisodesTitles: (episodes: Episode[]) => ReactElement = (
           </li>
         ))}
       </ul>
-      {episodes.length > 4 && <div>And many others...</div>}
+      {episodes.length > 4 && (
+        <div>{`And many others (${episodes.length - 4})...`}</div>
+      )}
     </>
   );
 };
