@@ -5,7 +5,7 @@ import {
 import type { Meta, Story } from "@storybook/react";
 
 export default {
-  title: "Components/CharacterCard/Status",
+  title: "CharacterCard/Status",
   component: CharacterCardStatusIcon,
 } as Meta;
 
