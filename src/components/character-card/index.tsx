@@ -1,5 +1,5 @@
 import { CharacterCardBackSide } from "@/components/character-card/card-back-side";
-import { CharacterCardStatusIcon } from "@/components/character-card/status-info";
+import { CharacterCardStatusIcon } from "@/components/character-card/status";
 import type { CharacterGender, CharacterStatus } from "@/types/characters";
 import type { Episode } from "@/types/episode";
 import type { Location } from "@/types/location";
@@ -20,7 +20,7 @@ export type CharacterCardProps = {
 
 export const CharacterCard: FC<CharacterCardProps> = (props) => {
   const { image, name, gender, status, species, type } = props;
-  const info = [status, gender, species].join(" - ");
+  const info = [gender, species].join(" - ");
   return (
     <article className="character-card">
       <div className="character-card-side character-card-side-front">
@@ -29,12 +29,11 @@ export const CharacterCard: FC<CharacterCardProps> = (props) => {
           <div className="character-card-name">{name}</div>
           <div className="character-card-status-info">
             <CharacterCardStatusIcon status={status} />
-            {info}
+            {` - ${info}`}
             {type && ` - ${type}`}
           </div>
         </div>
       </div>
-
       <div className="character-card-side character-card-side-back character-card-back-info">
         <CharacterCardBackSide {...props} />
       </div>

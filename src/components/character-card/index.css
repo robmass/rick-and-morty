@@ -2,11 +2,12 @@
   display: flex;
   flex-direction: column;
   height: 450px;
-  width: 350px;
+  width: 290px;
   position: relative;
   perspective: 150rem;
   -moz-perspective: 150rem;
 }
+
 .character-card-side {
   border-radius: 10px;
   transition: all 0.8s ease;
@@ -53,4 +54,11 @@
 }
 .character-card:hover .character-card-side-back {
   transform: rotateY(0);
+}
+
+@media (min-width: 390px) {
+  .character-card {
+    height: 450px;
+    width: 350px;
+  }
 }
