@@ -1,0 +1,9 @@
+.character-card-location-name,
+.character-card-location-planet-dimensions {
+  margin-bottom: 5px;
+}
+
+.character-card-location-planet-data {
+  display: flex;
+  justify-content: space-between;
+}
