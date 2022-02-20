@@ -1,7 +1,7 @@
 import { extractIdFromUrl } from "@/services/extract-id-from-url";
 import type { LocationApi } from "@/types/server/character-api";
 
-export const toLocations: (location: LocationApi) => number | undefined = (
+export const toLocation: (location: LocationApi) => number | undefined = (
   location
 ) => {
   const id = extractIdFromUrl(location.url);

@@ -1,20 +1,20 @@
-import { toLocations } from "@/services/character/to-episodes-and-locations/to-location";
+import { toLocation } from "@/services/character/to-episodes-and-locations/to-location";
 
 describe("toLocation", () => {
   it("Returns a correct location id", () => {
-    const id = toLocations({
+    const id = toLocation({
       url: "https://rickandmortyapi.com/api/location/256",
       name: "location 256",
     });
     expect(id).toEqual(256);
   });
   it("Returns undefined when location id is not correct", () => {
-    const id = toLocations({
+    const id = toLocation({
       url: "https://rickandmortyapi.com/api/location/",
       name: "location 256",
     });
     expect(id).toEqual(undefined);
-    const id2 = toLocations({
+    const id2 = toLocation({
       url: "https://rickandmortyapi.com/api/location",
       name: "location 256",
     });
