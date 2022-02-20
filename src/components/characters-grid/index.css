@@ -1,0 +1,28 @@
+.characters-grid-not-found {
+  text-align: center;
+  font-size: 35px;
+}
+
+.characters-grid {
+  display: grid;
+  grid-auto-rows: auto;
+  grid-column-gap: 1rem;
+  grid-row-gap: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .characters-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .characters-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1600px) {
+  .characters-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
