@@ -1,0 +1,18 @@
+.character-card-back-info-container {
+  padding-top: 20px;
+  padding-left: 10px;
+}
+
+.character-card-back-info {
+  padding-bottom: 5px;
+}
+
+.character-card-back-info-title {
+  font-weight: 600;
+}
+
+.character-card-back-info-separator {
+  border-top: 1px solid grey;
+  max-width: 100%;
+  margin: 5px 30px;
+}
