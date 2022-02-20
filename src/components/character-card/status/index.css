@@ -1,7 +1,6 @@
 .character-card-status {
-  width: 100%;
   text-transform: capitalize;
-  display: flex;
+  display: inline-block;
   align-items: center;
 }
 .character-card-status-icon {
