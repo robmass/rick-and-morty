@@ -16,7 +16,7 @@ CardBackSideStory.args = {
   status: "Alive",
   species: "Human",
   image: "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
-  type: "",
+  type: "type",
   origin: {
     name: "Earth",
     type: "Planet",
