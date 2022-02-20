@@ -1,20 +1,4 @@
 .character-card-status {
   text-transform: capitalize;
   display: inline-block;
-  align-items: center;
-}
-.character-card-status-icon {
-  height: 0.7rem;
-  width: 0.7rem;
-  margin-right: 0.5rem;
-  border-radius: 50%;
-  background: #4a4747;
-  display: inline-block;
-}
-
-.character-card-status-icon.Alive {
-  background: #069619;
-}
-.character-card-status-icon.Dead {
-  background: #b80707;
 }
