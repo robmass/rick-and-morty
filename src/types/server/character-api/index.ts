@@ -1,6 +1,6 @@
 import type { CharacterGender, CharacterStatus } from "@/types/characters";
 
-export type CharacterApi = {
+export type CharacterApiSchema = {
   id: number;
   name: string;
   status: CharacterStatus;
