@@ -1,5 +1,5 @@
+import { character1, character2, character3, character4 } from '@/services/parse-character/__tests__/character-api.fixture';
 import { toEpisodesAndLocations } from '@/services/to-episodes-and-locations';
-import { character1, character2, character3, character4 } from '@/services/to-episodes-and-locations/__tests__/character-api.fixture';
 
 describe('toEpisodesAndLocations', () => {
   it('Return an object with locations and episodes given a correct character', () => {
