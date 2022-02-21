@@ -1,4 +1,4 @@
-import { toLocation } from "@/services/character/to-episodes-and-locations/to-location";
+import { toLocation } from "@/services/to-episodes-and-locations/to-location";
 
 describe("toLocation", () => {
   it("Returns a correct location id", () => {

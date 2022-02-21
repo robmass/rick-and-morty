@@ -1,6 +1,6 @@
-import type { CharacterApi } from "@/types/server/character-api";
+import type { CharacterApiSchema } from "@/types/server/character-api";
 
-export const character1: CharacterApi = {
+export const character1: CharacterApiSchema = {
   id: 1,
   name: "Rick Sanchez",
   status: "Alive",
@@ -33,7 +33,7 @@ export const character1: CharacterApi = {
   created: "2017-11-04T18:48:46.250Z",
 };
 
-export const character2: CharacterApi = {
+export const character2: CharacterApiSchema = {
   id: 2,
   name: "Morty Smith",
   status: "Alive",
@@ -66,7 +66,7 @@ export const character2: CharacterApi = {
   created: "2017-11-04T18:50:21.651Z",
 };
 
-export const character3: CharacterApi = {
+export const character3: CharacterApiSchema = {
   id: 18,
   name: "Antenna Morty",
   status: "Alive",
@@ -87,7 +87,7 @@ export const character3: CharacterApi = {
   created: "2017-11-04T22:25:29.008Z",
 };
 
-export const character4: CharacterApi = {
+export const character4: CharacterApiSchema = {
   id: 9,
   name: "Agency Director",
   status: "Dead",
