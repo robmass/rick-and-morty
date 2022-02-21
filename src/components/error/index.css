@@ -1,0 +1,11 @@
+.error-container {
+  text-align: center;
+}
+
+.error-logo {
+  height: 40vmin;
+}
+
+.error-message {
+  font-size: 30px;
+}
