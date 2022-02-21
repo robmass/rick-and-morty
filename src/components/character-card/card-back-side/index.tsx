@@ -1,13 +1,12 @@
-import type { CharacterCardProps } from "@/components/character-card";
-import { CharacterCardEpisodes } from "@/components/character-card/episodes";
-import { CharacterCardLocation } from "@/components/character-card/location";
-import { CharacterCardStatusIcon } from "@/components/character-card/status";
-import type { FC } from "react";
-import "./index.css";
+import type { CharacterCardProps } from '@/components/character-card';
+import { CharacterCardEpisodes } from '@/components/character-card/episodes';
+import { CharacterCardLocation } from '@/components/character-card/location';
+import { CharacterCardStatusIcon } from '@/components/character-card/status';
+import type { FC } from 'react';
+import './index.css';
 
 export const CharacterCardBackSide: FC<CharacterCardProps> = (props) => {
-  const { name, gender, status, type, species, origin, location, episodes } =
-    props;
+  const { name, gender, status, type, species, origin, location, episodes } = props;
   return (
     <div className="character-card-back-info-container">
       <div className="character-card-back-info">

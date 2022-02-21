@@ -1,21 +1,17 @@
-import "@/components/character-card/card-back-side/index.css";
-import "@/components/character-card/location/index.css";
-import type { Location } from "@/types/location";
-import type { FC } from "react";
+import '@/components/character-card/card-back-side/index.css';
+import '@/components/character-card/location/index.css';
+import type { Location } from '@/types/location';
+import type { FC } from 'react';
 
 export type CharacterCardLocationProps = {
   title: string;
   location: Location | undefined;
 };
-export const CharacterCardLocation: FC<CharacterCardLocationProps> = ({
-  title,
-  location,
-}) => {
+export const CharacterCardLocation: FC<CharacterCardLocationProps> = ({ title, location }) => {
   if (!location) {
     return (
       <div className="character-card-back-info">
-        <span className="character-card-back-info-title">{title}: </span>{" "}
-        unknown information
+        <span className="character-card-back-info-title">{title}: </span> unknown information
       </div>
     );
   }

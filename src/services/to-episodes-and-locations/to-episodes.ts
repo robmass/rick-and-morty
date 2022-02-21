@@ -1,4 +1,4 @@
-import { extractIdFromUrl } from "@/services/extract-id-from-url";
+import { extractIdFromUrl } from '@/services/extract-id-from-url';
 
 export const toEpisodes: (episodes: string[]) => number[] = (episodes) => {
   return episodes.reduce((ids: number[], episode) => {
