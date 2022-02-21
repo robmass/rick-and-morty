@@ -15,7 +15,7 @@ function App() {
         {!isLoading && (
           <>
             <CharactersGrid characters={characters} />
-            <Pagination handlePageChange={getCharacters} pageCount={pageCount} actualPage={actualPage} />
+            {pageCount > 1 && <Pagination handlePageChange={getCharacters} pageCount={pageCount} actualPage={actualPage} />}
           </>
         )}
       </div>
