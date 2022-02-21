@@ -13,8 +13,8 @@ export type CharacterCardProps = {
   status: CharacterStatus;
   type: string;
   species: string;
-  origin: Location;
-  location: Location;
+  origin: Location | undefined;
+  location: Location | undefined;
   episodes: Episode[];
 };
 
