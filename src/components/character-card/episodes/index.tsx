@@ -30,14 +30,14 @@ const renderEpisodesTitles: (episodes: Episode[]) => ReactElement = (
   return (
     <>
       <ul className="character-card-episodes-list">
-        {episodes.slice(0, 4).map((e) => (
+        {episodes.slice(0, 3).map((e) => (
           <li>
             {e.name} ({e.episode})
           </li>
         ))}
       </ul>
-      {episodes.length > 4 && (
-        <div>{`And many others (${episodes.length - 4})...`}</div>
+      {episodes.length > 3 && (
+        <div>{`And many others (${episodes.length - 3})...`}</div>
       )}
     </>
   );

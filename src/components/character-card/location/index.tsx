@@ -5,12 +5,20 @@ import type { FC } from "react";
 
 export type CharacterCardLocationProps = {
   title: string;
-  location: Location;
+  location: Location | undefined;
 };
 export const CharacterCardLocation: FC<CharacterCardLocationProps> = ({
   title,
   location,
 }) => {
+  if (!location) {
+    return (
+      <div className="character-card-back-info">
+        <span className="character-card-back-info-title">{title}: </span>{" "}
+        unknown information
+      </div>
+    );
+  }
   const { name, dimension, amountOfResidents, type } = location;
   return (
     <div className="character-card-location">
