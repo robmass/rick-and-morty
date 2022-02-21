@@ -15,16 +15,22 @@ export const useCharacters = () => {
   const [characters, setCharacters] = useState<Character[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | undefined>();
+  const [pageCount, setPageCount] = useState(0);
+  const [actualPage, setActualPage] = useState(0);
   useEffect(() => {
     handleGetCharacter(1);
   }, []);
+
+  const getCharacters: (page: number) => void = (page) => {
+    handleGetCharacter(page);
+  };
 
   const handleGetCharacter = async (page: number) => {
     setIsLoading(true);
     const characterApiUrl = page > 1 ? `${CHARACTER_API_URL}?page=${page}` : CHARACTER_API_URL;
     const response = await fetch(characterApiUrl);
 
-    const { results, error }: JSONResponse<CharacterApiSchema> = await response.json();
+    const { info, results, error }: JSONResponse<CharacterApiSchema> = await response.json();
     if (!response.ok) {
       setError(error);
       return;
@@ -35,13 +41,21 @@ export const useCharacters = () => {
 
     const { episodes, locations } = toEpisodesAndLocations(results);
     const [locationsReponse, episodesResponse] = await Promise.all([
-      (await fetch(`${LOCATION_API_URL}/${locations.join(',')}`)).json() as Promise<LocationApiSchema[]>,
-      (await fetch(`${EPISODE_API_URL}/${episodes.join(',')}`)).json() as Promise<EpisodeApiSchema[]>,
+      (await fetch(`${LOCATION_API_URL}/${locations.join(',')}`)).json() as Promise<LocationApiSchema[] | LocationApiSchema>,
+      (await fetch(`${EPISODE_API_URL}/${episodes.join(',')}`)).json() as Promise<EpisodeApiSchema[] | EpisodeApiSchema>,
     ]);
-    const characters: Character[] = parseCharacters(results, locationsReponse, episodesResponse);
+    const characters: Character[] = parseCharacters(
+      results,
+      Array.isArray(locationsReponse) ? locationsReponse : [locationsReponse],
+      Array.isArray(episodesResponse) ? episodesResponse : [episodesResponse]
+    );
+    if (info) {
+      setPageCount(info.pages);
+    }
+    setActualPage(page);
     setCharacters(characters);
     setIsLoading(false);
   };
 
-  return { isLoading, characters, error };
+  return { pageCount, isLoading, characters, error, getCharacters, actualPage };
 };

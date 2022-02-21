@@ -1,11 +1,7 @@
-import type { Info } from "src/types/info";
-
-export type ApiResponse<T> = {
-  info: Info;
-  results: T;
-};
+import type { Info } from '@/types/info';
 
 export type JSONResponse<T> = {
+  info?: Info;
   results?: T[];
   error?: string;
 };

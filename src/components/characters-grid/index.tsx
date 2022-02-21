@@ -1,7 +1,7 @@
-import { CharacterCard } from "@/components/character-card";
-import "@/components/characters-grid/index.css";
-import type { Character } from "@/types/characters";
-import type { FC } from "react";
+import { CharacterCard } from '@/components/character-card';
+import '@/components/characters-grid/index.css';
+import type { Character } from '@/types/characters';
+import type { FC } from 'react';
 export type CharactersGridProps = {
   characters: Character[];
 };
@@ -13,8 +13,8 @@ export const CharactersGrid: FC<CharactersGridProps> = ({ characters }) => {
 
   return (
     <div className="characters-grid">
-      {characters.map((character) => (
-        <CharacterCard {...character} />
+      {characters.map((character, index) => (
+        <CharacterCard {...character} key={`${character.id}-${index}`} />
       ))}
     </div>
   );
