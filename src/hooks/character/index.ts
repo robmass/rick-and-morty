@@ -36,6 +36,8 @@ export const useCharacters = () => {
       return;
     }
     if (!results || results.length === 0) {
+      setIsLoading(false);
+      setCharacters([]);
       return;
     }
 
