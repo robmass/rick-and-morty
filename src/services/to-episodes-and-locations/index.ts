@@ -1,14 +1,12 @@
-import { toEpisodes } from "@/services/to-episodes-and-locations/to-episodes";
-import { toLocation } from "@/services/to-episodes-and-locations/to-location";
-import type { CharacterApiSchema } from "@/types/server/character-api";
+import { toEpisodes } from '@/services/to-episodes-and-locations/to-episodes';
+import { toLocation } from '@/services/to-episodes-and-locations/to-location';
+import type { CharacterApiSchema } from '@/types/server/character-api';
 
 export type ToEpisodesAndLocations = {
   episodes: number[];
   locations: number[];
 };
-export const toEpisodesAndLocations: (
-  characters: CharacterApiSchema[]
-) => ToEpisodesAndLocations = (characters) => {
+export const toEpisodesAndLocations: (characters: CharacterApiSchema[]) => ToEpisodesAndLocations = (characters) => {
   const returnedEpisodes: number[] = [];
   const returnedLocations: number[] = [];
 

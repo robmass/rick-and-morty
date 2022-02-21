@@ -1,10 +1,10 @@
-import { CharacterCardBackSide } from "@/components/character-card/card-back-side";
-import { CharacterCardStatusIcon } from "@/components/character-card/status";
-import type { CharacterGender, CharacterStatus } from "@/types/characters";
-import type { Episode } from "@/types/episode";
-import type { Location } from "@/types/location";
-import type { FC } from "react";
-import "./index.css";
+import { CharacterCardBackSide } from '@/components/character-card/card-back-side';
+import { CharacterCardStatusIcon } from '@/components/character-card/status';
+import type { CharacterGender, CharacterStatus } from '@/types/characters';
+import type { Episode } from '@/types/episode';
+import type { Location } from '@/types/location';
+import type { FC } from 'react';
+import './index.css';
 
 export type CharacterCardProps = {
   image: string;
@@ -20,7 +20,7 @@ export type CharacterCardProps = {
 
 export const CharacterCard: FC<CharacterCardProps> = (props) => {
   const { image, name, gender, status, species, type } = props;
-  const info = [gender, species].join(" - ");
+  const info = [gender, species].join(' - ');
   return (
     <article className="character-card">
       <div className="character-card-side character-card-side-front">
