@@ -1,6 +1,6 @@
 # Rick & Morty Characters
 
-The application shows the Rick & Morty characters informations using the Rick & Morty API ( rickandmortyapi.com )
+The application shows the Rick & Morty characters informations using the Rick & Morty API ( [rickandmortyapi.com](https://rickandmortyapi.com) )
 
 ## Available Scripts
 
