@@ -23,10 +23,15 @@ export const CharacterCard: FC<CharacterCardProps> = (props) => {
   const { image, name, gender, status, species, type } = props;
   const stringa = `font-size: 1.5em;
   text-align: center;
-  color: red;`;
+  color: red;
+  @media(min-width: 768px){
+    font-size: 2em;
+    color: blue;
+  }`;
   const Name = styled.div`
     ${stringa}
   `;
+
   const info = [gender, species].join(' - ');
   return (
     <article className="character-card">
